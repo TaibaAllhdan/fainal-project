@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="./pic/C91A33D0-8655-4C55-A0ED-811A00182D7E.ico"/>
     <link rel="stylesheet" href="./1.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>نظم لي</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+   
+  <!-- con -->
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(204, 204, 204, 0.884);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color:  #7c7575;
+      padding: 20px;
+    }
+    .h1{
+      color: #c59d5f;
+       font-family: 'Kufam', cursive;
+    }
+
+    .choose2{
+    text-align:start;  
+    color: #cccccc;
+    font-family: 'Kufam', cursive;
+     }
+    </style>
+  
+  
+  
+    <title>NATHEM.LEE </title>
 </head>
 <body>
     
@@ -32,16 +84,10 @@
             </ul>
           </div>
         </nav>
-        <!-- search -->
-        <!-- <div class="search">
-           <input type="text" placeholder=" أبحث عن ما تريد" >
- 
-           <! search icon -->
-           <!-- <i class="fas fa-search"></i>
-         </div>   --> 
-    </nav>
- 
-    <div class="contact1" style="max-width:800px" id="contact">
+ <!-- END -->
+ <section class="hero" id="hero>">
+ <!-- HERO -->
+    <!-- <div class="contact1" style="max-width:800px" id="contact">
       <h2 class="co">CONTACT</h2>
       <p class="note"><i> tell me!</i></p>
       <div class="choose">
@@ -49,10 +95,40 @@
           <i class="mark" style="width:30px"></i> KUWAIT , YES here📍 <br>
           <i class="phone" style="width:30px"></i> Phone: +965 96997279<br>
           <i class="mail" style="width:30px"> </i> Email: taiba_99@hotmail.com<br>
-        </div>
+        </div> -->
+     <!-- con -->
      
-
-
+  <div>
+     <h1 class="h1"> فضفض لي </h1><br>
+     <div class="choose2">
+      <i class="tell" style="width:30px"></i> TELL ME! <br>
+      <i class="mark" style="width:30px"></i> KUWAIT , YES here📍 <br>
+      <i class="phone" style="width:30px"></i> Phone: +965 96997279<br>
+      <i class="mail" style="width:30px"> </i> Email: taiba_99@hotmail.com<br>
+    </div> 
+  </div>
+     <div class="container">
+       <form action="/action_page.php">
+         <label for="fname">First Name</label>
+         <input type="text" id="fname" name="firstname" placeholder="Your name..">
+     
+         <label for="lname">Last Name</label>
+         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+     
+         <label for="country">Country</label>
+         <select id="country" name="country">
+           <option value="KUWAIT">KUWAIT</option>
+           <option value="canada">Canada</option>
+           <option value="usa">USA</option>
+         </select>
+     
+         <label for="subject">Subject</label>
+         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+     
+         <input type="submit" value="Submit">
+       </form>
+     </div>
+     
 
 </body>
 </html>

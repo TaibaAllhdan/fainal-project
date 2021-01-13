@@ -1,3 +1,60 @@
+
+    
+    <!---->
+
+      <!-- Name <input id="nemebox" type="text"></input> <br><br>
+      phoneN0 <input id="n0box" type="text"></input> <br><br>
+      country <input id="cobox" type="text"></input> <br><br>
+      Gender <input id="genbox" type="text"></input> <br><br>
+     <br><br>
+     <button id="insert">INSERT</button>
+     <button id="select">SELECT</button>
+     <button id="update">UPDATE</button>
+     <button id="delete">DELETE</button>
+
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script> 
+     
+     <script id="MainScript">
+      
+        var firebaseConfig = {
+            apiKey: "AIzaSyBhz6ki564J_eZVj04YNRvEB6k0RmANjuI",
+           authDomain: "nathem-lee.firebaseapp.com",
+           projectId: "nathem-lee",
+           storageBucket: "nathem-lee.appspot.com",
+           messagingSenderId: "913799811991",
+           appId: "1:913799811991:web:aab71b670e08c1b3f06ad2"
+         };
+          
+       firebase.initializeApp(firebaseConfig);
+    // --------------------------READY DATA--------------------------------------------------
+      var nameV, n0V, conV, genV;
+
+      function Ready(){
+        nameV = getElementById('namebox').value;
+        n0V = getElementById('n0box').value;
+        conV = getElementById('cobox').value;
+        genV = getElementById('genbox').value;
+      }
+// -----------------------------insert process-----------------------------------------------
+
+        document.getElementById('insert').onclick = function(){
+             Ready();
+             firebase.database().ref('coustmer/'+n0V).set({
+               NameOfCoustmer:nameV,
+               phoneN0:n0V,
+               country:conV,
+               Gender:genV,
+          
+             })
+         }
+    </script> -->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +63,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title> NATHEM.LEE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./اساله.css">
+    <title>NATHEM.LEE </title>
 </head>
 <body>
     
-    <!-- navigation -->
+    <!-- navigation-->
 
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
@@ -33,12 +94,83 @@
             </ul>
           </div>
         </nav>
-    </nav>
+   <!-- HERO -->
+   <section class="hero" id="hero>">
+    <!-- pic -->
  
-    <section class="hero" id="hero>"></section>
 
+     <!-- <div class="m"><a href="#" ></a> <img style="height: 200px;width: 200px;margin-right: 20px;border-radius: 10px;" src="./pic/عرس.jpg"></div>
+     <div class="m"><a href="#" ></a> <img style="height: 200px;width: 200px;margin-right: 20px;border-radius: 10px;" src="./pic/تخرج.jpg"></div>
+     <div class="m"><a href="#" ></a> <img style="height: 200px;width: 200px;margin-right: 20px;border-radius: 10px;" src="./pic/عيد ميلاد بنت.jpg"></div>
+      <div class="m"><a href="#" ></a> <img style="height: 200px;width: 200px;margin-right: 20px;border-radius: 10px;" src="./pic/مولود.jpg"></div>  -->
 
+ <div class="cont">
+     <div class="box">
+       <div class="imgBox">
+         <!-- <a href="./1wedding.html" ><img src="./pic/عرس.jpg"></a> -->
+       </div>
+       <div class="deltais">
+          <div class="content">
+             <h2> من أنا؟ </h2>
+             <P>أنا الطالبة طيبه اللحدان من مبادرة الكويت تبرمج في مسار  برمجة وتطوير المواقع</P>
+          
+        </div>
+       </div>
+      </div>
+      <div class="box">
+        <div class="box">
+          <div class="imgBox">
+            <!-- <a href="./1bir.html" ><img src="./pic/happy-birthday-.jpg"></a> -->
+          </div>
+          <div class="deltais">
+             <div class="content">
+               <h2> فكره الموقع؟ </h2>
+               <P> عرض جميع المشاريع التي يمكن للمستخدم الاستفاده منها للمناسبات الخاصه والعامه </P>
+           </div>
+          </div>
+         </div>
+      </div>
+      <div class="box">
+        <div class="box">
+          <div class="imgBox">
+            <!-- <a href="./1baby.htm" ><img src="./pic/مولود.jpg"></a> -->
+          </div>
+          <div class="deltais">
+             <div class="content">
+               <h2> هل أقدر أضيف مشروعي الخاص؟ </h2>
+               <P>  أجل , كل شخص يقدر يضيف مشروعه او خدمته الخاصه</P>
+           </div>
+          </div>
+         </div>
+      </div>
+      <div class="box">
+        <div class="box">
+          <div class="imgBox">
+            <!-- <a href="./1gra.html" ><img src="./pic/تخرج.jpg"></a> -->
+          </div>
+          <div class="deltais">
+             <div class="content">
+               <h2> كيف أضيف مشروعي الخاص؟ </h2>
+               <P> عن طريق تقديم طلب في الايميل</P>
+           </div>
+          </div>
+         </div>
+      </div>
+      <div class="box">
+        <div class="box">
+          <div class="imgBox">
+            <!-- <a href="./1other.html" ><img src="./pic/other.png"></a> -->
+          </div>
+          <div class="deltais">
+             <div class="content">
+               <h2> ماهي مميزات الموقع؟</h2>
+               <P>   نظم لي يضم أغلب الشركات والمشاريع التي تُسهل على المستخدم الوصول اليها وسهوله التواصل مع الجهه المطلوبه </P>
+           </div>
+          </div>
+         </div>
+      </div>
 
-
+</div>
+     
 </body>
-</html>
+</html> 
